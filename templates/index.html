@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Llama Text Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Texte Llama</h1>
+        <form method="post">
+            <textarea name="input_text" placeholder="Écrivez quelque chose ici..." required>{{ input_text or '' }}</textarea>
+            <button type="submit">Générer</button>
+        </form>
+        {% if response %}
+            <div class="response">
+                <h2>Résultat :</h2>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
